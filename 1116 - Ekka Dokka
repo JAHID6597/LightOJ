@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int testcase,count=1;
+    cin>>testcase;
+    while(testcase--)
+    {
+        long long int number,i,j,a,b,x;
+        scanf("%lld",&number);
+        if(number%2!=0)
+        {
+            printf("Case %d: Impossible\n",count++);
+        }
+        else
+        {
+            for(i=2; i<=number/2; i+=2)
+            {
+                    if(number%i==0)
+                    {
+                        x=number/i;
+                    }
+                    if(x%2==1)
+                    {
+                        b=1;
+                        break;
+                    }
+            }
+            if(b==1)
+            {
+                printf("Case %d: %lld %lld\n",count++,x,i);
+            }
+        }
+    }
+    return 0;
+}
