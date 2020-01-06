@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i=1;
+    cin>>t;
+    while(t--)
+    {
+        int a[1000],j,m,s=0;
+        cin>>m;
+        for(j=1; j<=m; j++)
+        {
+            cin>>a[j];
+        }
+        for(j=1; j<=m; j++)
+        {
+            if(a[j]>0)
+            {
+                s=s+a[j];
+ 
+            }
+        }
+        cout<<"Case "<<i<<": "<<s<<endl;
+        i++;
+    }
+}
