@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long testcase,i,n,m,ans;
+    int c=0;
+    //freopen("H:\p.txt","r",stdin);
+    cin>>testcase;
+    while(testcase--)
+    {
+        cin>>n>>m;
+        ans = (n*m)/2;
+        printf("Case %d: %lld\n",++c,ans);
+ 
+    }
+    return 0;
+}
