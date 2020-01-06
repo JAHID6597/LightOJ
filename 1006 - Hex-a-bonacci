@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    long long int a[10001],m;
+    int n, caseno = 0, cases;
+    scanf("%d", &cases);
+    while( cases-- ) {
+        scanf("%lld %lld %lld %lld %lld %lld %d", &a[0], &a[1], &a[2], &a[3], &a[4], &a[5], &n);
+        for(m=6;m<=n;m++)
+        {
+            a[m]=(a[m-1]+a[m-2]+a[m-3]+a[m-4]+a[m-5]+a[m-6])% 10000007;
+        }
+        printf("Case %d: %lld\n", ++caseno, a[n] % 10000007);
+    }
+    return 0;
+}
