@@ -1,0 +1,39 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    double value_of_log[1000000];
+    //log10(n!) = log101+log102+..........+log10n
+    void fact_work()
+    {
+        for(long long i=1; i<=1000000; i++)
+        {
+            value_of_log[i] = value_of_log[i-1]+log(i);
+        }
+    }
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        long long t,c=0;
+     
+        fact_work();
+     
+        cin>>t;
+        while(t--)
+        {
+            long long n,b,a;
+            cin>>n>>b;
+     
+            //(log10(n) / log10(b)) +1
+            a = value_of_log[n]/log(b)+1;
+     
+            cout<<"Case "<<++c<<": "<<a<<endl;
+        }
+        return 0;
+    }
