@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+//#define debug
+int main()
+ 
+{
+#ifdef debug
+    freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+#endif
+    long long int t,j=1;
+    cin>>t;
+    while(t--)
+    {
+        long long int n;
+        cin>>n;
+        long long int x,y,p,q;
+        p=ceil(sqrt(n));
+        q=p*p-n;
+        if(p>q)
+        {
+            x=p,y=q+1;
+        }
+        else
+        {
+            x=2*p-q-1,y=p;
+        }
+        if(p&1)
+            swap(x,y);
+        cout<<"Case "<<j++<<": "<<x<<" "<<y<<endl;
+    }
+    return 0;
+}
