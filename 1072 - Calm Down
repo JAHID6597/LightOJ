@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define pi acos(-1.0)
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    //freopen("input.txt","r",stdin);
+
+    int t;
+    cin>>t;
+    int Case = 0;
+    while(t--)
+    {
+        double R,ans;
+        int n;
+        cin>>R>>n;
+        ans = sin(pi/n);
+        cout<<"Case "<<++Case<<": "<<std::fixed<<std::setprecision(10)<<(R*ans)/(1+ans)<<endl;
+    }
+    return 0;
+}
