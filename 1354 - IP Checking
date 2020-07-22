@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+long long bin_to_dec(long long n)
+{
+    long long rem,dec=0,b=1;
+    while (n > 0)
+    {
+        rem = n % 10;
+        dec = dec + rem * b;
+        b *= 2;
+        n /= 10;
+    }
+    return dec;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    //freopen("input.txt","r",stdin);
+
+    int t;
+    cin>>t;
+    int Case = 0;
+    while(t--)
+    {
+        long long a,b,c,d;
+        char ch;
+        long long e,f,g,h;
+        cin>>a>>ch>>b>>ch>>c>>ch>>d;
+        cin>>e>>ch>>f>>ch>>g>>ch>>h;
+
+        long long a1 = bin_to_dec(e);
+        long long a2 = bin_to_dec(f);
+        long long a3 = bin_to_dec(g);
+        long long a4 = bin_to_dec(h);
+
+        if(a1 == a && a2 == b && a3 == c && a4 == d)
+            cout<<"Case "<<++Case<<": "<<"Yes"<<endl;
+        else
+            cout<<"Case "<<++Case<<": "<<"No"<<endl;
+    }
+    return 0;
+}
