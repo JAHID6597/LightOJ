@@ -1,0 +1,33 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    int main()
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+     
+        //freopen("input.txt","r",stdin);
+     
+        long long t,Case=1;
+        cin>>t;
+        while(t--){
+            long long n,w,i,Move=1,temp;
+            cin>>n>>w;
+            long long x,y[n];
+            for(i=0;i<n;i++){
+                cin>>x>>y[i];
+            }
+            sort(y,y+n);
+            temp = y[0] + w;
+            for(i=1;i<n;i++){
+                if(y[i] > temp){
+                    Move++;
+                    temp = y[i]+w;
+                }
+            }
+            cout<<"Case "<<Case<<": "<<Move<<endl;
+            Case++;
+        }
+        return 0;
+    }
